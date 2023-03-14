@@ -6,12 +6,12 @@ public class Nave {
     boolean velocidadeDaLuz = false;
     Arma arma;
 
-    public Nave(String nome, int velocidade, boolean velocidadeDaLuz, Arma arma) {
+    public Nave(String nome, int velocidade, boolean velocidadeDaLuz, String tipoArma, int poder) {
         this.nome = nome;
         this.velocidade = velocidade;
         this.velocidadeDaLuz = velocidadeDaLuz;
 
-        this.arma = arma;
+        this.arma = new Arma(tipoArma, poder);
     }
 
     public void MostrarInfo(){
