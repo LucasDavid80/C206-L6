@@ -1,7 +1,14 @@
 package org.example.pessoa;
 
-public class Bot extends Pessoa {
+import org.example.interfaces.Interacao;
+
+public class Bot extends Pessoa implements Interacao {
     private boolean hostil;
+
+    public Bot(String nome, boolean hostil) {
+        super(nome);
+        this.hostil = hostil;
+    }
 
     @Override
     public void mostraInfo() {
@@ -10,7 +17,22 @@ public class Bot extends Pessoa {
 
     @Override
     public void fazMissao() {
-        super.fazMissao();
+        if (hostil ==  true){
+            System.out.println("Atrapalhou o jogador a fazer a missão.");
+        } else {
+            System.out.println("Ajudou o jogador a fazer a missão.");
+        }
+    }
+
+    @Override
+    public void passarMissao() {
+
+        if (hostil == true){
+            System.out.println("Este Bot não passa missões!");
+        } else {
+            System.out.println("Este Bot passa missões!");
+        }
+
     }
 
     public boolean isHostil() {

@@ -1,11 +1,15 @@
 package org.example.pessoa;
 
-public class Pessoa {
-    public int qtdPessoa;
+public abstract class Pessoa {
+    public static int qtdPessoa;
     private String nome;
 
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
     public void mostraInfo(){}
-    public void fazMissao(){}
+    public abstract void fazMissao();
 
     public String getNome() {
         return nome;

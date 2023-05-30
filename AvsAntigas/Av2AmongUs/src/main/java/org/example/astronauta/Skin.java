@@ -1,4 +1,4 @@
-package org.example;
+package org.example.astronauta;
 
 public class Skin {
     private String tipo;

@@ -1,17 +1,31 @@
-package org.example;
+package org.example.astronauta;
 
-public class Astronauta {
+public abstract class Astronauta {
 
-    public int cont;
+    public static int cont;
     private String cor;
     private String nome;
     public Skin skin;
     public Pet pet;
 
-    public void mostraInfo(){}
-    public void verCameras(){}
-    public void reportar(){}
-    public void reparar(){}
+    public Astronauta(String cor, String nome, Skin skin, Pet pet) {
+        this.cor = cor;
+        this.nome = nome;
+        this.skin = skin;
+        this.pet = pet;
+    }
+
+    public void mostraInfo(){
+        System.out.println("Nome: "+this.nome);
+        System.out.println("Cor: "+this.cor);
+        System.out.println("Skin: "+this.skin.getTipo());
+        System.out.println("Pet: "+this.pet.getNome());
+    }
+    public void verCameras(){
+        System.out.println(nome + " olhou as câmeras");
+    }
+    public abstract void reportar();
+    public abstract void reparar();
 
     public String getCor() {
         return cor;

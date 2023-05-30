@@ -1,2 +1,5 @@
-package org.example;public interface FazerBarulho {
+package org.example.interfaces;
+
+public interface FazerBarulho {
+    public void fazerBarulho();
 }

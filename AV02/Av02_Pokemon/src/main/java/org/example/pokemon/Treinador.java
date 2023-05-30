@@ -19,12 +19,34 @@ public class Treinador {
     public void mostraInfo(){
         System.out.println("Treinador: "+this.nome);
         System.out.println("POkemon(s): ");
+        System.out.println();
         for (int i = 0; i < pokemons.length;i++){
             if (pokemons[i] != null){
-                System.out.println("Nome: "+pokemons[i].getNome());
-                System.out.println("Tipo: "+pokemons[i].getTipo());
-                System.out.println("Held Item: "+pokemons[i].heldItem);
-                pokemons[i].
+                if (pokemons[i] instanceof Squirtle) {
+                    Squirtle pokemon = (Squirtle) pokemons[i];
+                    pokemon.fazerBarulho();
+                    pokemon.mostraInfo();
+                    System.out.println("Multiplicador de água " + pokemon.getMultiplicadorAgua());
+                    pokemon.atacar();
+                }
+                if (pokemons[i] instanceof Bulbassaur) {
+                    Bulbassaur pokemon = (Bulbassaur) pokemons[i];
+                    pokemon.fazerBarulho();
+                    pokemon.mostraInfo();
+                    System.out.println("Luminosidade do ambiente " + pokemon.getLuminosidadeAmbiente());
+                    pokemon.atacar();
+                    pokemon.ataqueEspecial();
+                }
+                if (pokemons[i] instanceof Pikachu) {
+                    Pikachu pokemon = (Pikachu) pokemons[i];
+                    pokemon.fazerBarulho();
+                    pokemon.mostraInfo();
+                    System.out.println("soltar raios " + pokemon.getSoltarRaios());
+                    System.out.println("Paralisia eletrica " + pokemon.getParalisiaEletrica());
+                    pokemon.atacar();
+                    pokemon.ataqueEspecial();
+                }
+                System.out.println("----------------------------------------------");
             }
         }
     }

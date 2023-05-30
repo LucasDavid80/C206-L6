@@ -1,0 +1,12 @@
+++ Produto ++
+Arroz
+20.0
+Comida
+++ Produto ++
+Sabonete
+2.5
+Higiene
+++ Produto ++
+Cadeira
+100.0
+Decoração

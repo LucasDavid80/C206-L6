@@ -1,34 +1,32 @@
 package org.example.pokemon;
 
-public class Pokemon {
+public abstract class Pokemon {
     public static int qtdPokemon = 0;
     private String nome;
     private String tipo;
     public HeldItem heldItem;
 
-    public void mostraInfo(){}
-    public void atacar(){}
+    public  void mostraInfo(){
+        if (heldItem == null){
+            System.out.println("Não possui item");
+        } else {
+            System.out.println("Held item: "+heldItem.tipo);
+        }
+    }
+    public  void atacar(){}
 
     public Pokemon(String nome, String tipo, HeldItem heldItem) {
+        qtdPokemon++;
         this.nome = nome;
         this.tipo = tipo;
         this.heldItem = heldItem;
-        qtdPokemon++;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getTipo() {
         return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
     }
 }
