@@ -1,0 +1,16 @@
+++ Jogo ++
+FIFA23
+65.5
+Esporte
+++ Jogo ++
+Forza
+50.0
+Corrida
+++ Jogo ++
+Mario
+79.9
+Aventura
+++ Jogo ++
+Sonic
+49.9
+Aventura
